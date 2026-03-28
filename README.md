@@ -1,14 +1,13 @@
-# YouTube Shorts Blocker Chrome Extension
+# Focus Filter Chrome Extension
 
-A Chrome extension that blocks YouTube Shorts with passcode protection to help reduce short-form video addiction.
+A Chrome extension that blocks addictive short-form content and distracting pages to help reduce digital addiction and improve focus.
 
 ## Features
 
-- **Passcode Protection**: Set a secure passcode to control access to YouTube Shorts
-- **Temporary Unlock**: Unlock Shorts temporarily for 30 minutes when needed
-- **Complete Blocking**: Blocks Shorts on homepage, sidebar, search results, and direct URLs
+- **Temporary Unlock**: Unlock content temporarily for 30 minutes when needed
+- **Complete Blocking**: Blocks short-form content on homepages, sidebars, search results, and direct URLs
 - **Privacy Focused**: No personal information collected or stored
-- **Works on Desktop and Mobile**: Compatible with both desktop and mobile versions of YouTube
+- **Works on Desktop and Mobile**: Compatible with both desktop and mobile versions of supported sites
 
 ## Installation
 
@@ -35,18 +34,14 @@ Or use any image editing tool to create a simple icon (e.g., a blocked/prohibite
 ### Initial Setup
 
 1. Click the extension icon in Chrome toolbar
-2. Create a passcode (minimum 4 characters)
-3. Confirm the passcode
-4. YouTube Shorts will be automatically blocked
+2. Blocking is enabled automatically
 
 ### Managing Blocking
 
-- **Unlock Temporarily**: Click "Unlock Temporarily" and enter your passcode
-  - Shorts will be unlocked for 30 minutes
+- **Unlock Temporarily**: Click "Unlock Temporarily" to unlock content for 30 minutes
   - A timer shows remaining unlock time
 - **Lock Immediately**: When unlocked, click "Lock Now" to re-enable blocking
-- **Change Passcode**: Use the "Change Passcode" button in settings
-- **Reset Extension**: Use "Reset Extension" to remove passcode and disable blocking
+- **Reset Extension**: Use "Reset Extension" to disable blocking
 
 ### What Gets Blocked
 
@@ -60,14 +55,13 @@ Or use any image editing tool to create a simple icon (e.g., a blocked/prohibite
 
 The extension uses:
 - **Content Scripts**: Detect and block Shorts content on YouTube pages
-- **Chrome Storage API**: Store passcode and blocking state locally
+- **Chrome Storage API**: Store blocking state locally
 - **Mutation Observers**: Monitor dynamic content changes on YouTube
 - **Service Worker**: Manage background tasks and unlock timers
 
 ## Privacy
 
 - No personal information is collected
-- Passcode is stored locally in Chrome's secure storage
 - No external servers or analytics
 - All blocking happens locally in your browser
 
@@ -75,28 +69,35 @@ The extension uses:
 
 1. Load the extension as described above
 2. Visit YouTube.com
-3. Set up a passcode through the extension popup
-4. Try accessing:
+3. Try accessing:
    - YouTube homepage (Shorts shelf should be blocked)
    - Shorts tab in sidebar (should be disabled)
    - Direct Shorts URL like `youtube.com/shorts/[video-id]`
    - Search results containing Shorts
-5. Test unlock functionality with your passcode
-6. Verify 30-minute timer works correctly
+4. Test unlock functionality
+5. Verify 30-minute timer works correctly
 
 ## Troubleshooting
 
 - **Extension not working**: Refresh the YouTube page after installation
-- **Passcode forgotten**: Use "Reset Extension" to clear all data and start over
 - **Shorts still visible**: Check that blocking is enabled in the extension popup
 
-## Development Notes
+## Roadmap
 
-This is a POC (Proof of Concept) version. Future improvements could include:
+This is a POC (Proof of Concept) version. Planned improvements include:
+
+### Platform Expansion
+- **Reddit**: Block infinite scroll feeds and distracting subreddits
+- **Instagram Reels**: Block Reels tab and autoplay short-form videos
+- **Facebook**: Block Reels and addictive feed elements
+- **TikTok**: Full page blocking or feed filtering
+- **X / Twitter**: Block algorithmically amplified content and trending feeds
+
+### Feature Improvements
 - Customizable unlock duration
 - Schedule-based blocking (e.g., block during work hours)
 - Statistics on blocking effectiveness
-- Whitelist for educational Shorts
+- Per-site blocking configuration
 - Better mobile YouTube support
 
 ## Files Structure
@@ -115,4 +116,3 @@ focus-filter/
 ├── icon128.png           # 128x128 icon (needs to be created)
 └── README.md             # This file
 ```
-
